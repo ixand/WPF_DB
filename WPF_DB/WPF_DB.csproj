@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\password.ttf" />
+    <None Remove="Reports\Report1.rdlc" />
+    <None Remove="Reports\Report2.rdlc" />
+    <None Remove="Reports\Report3.rdlc" />
+    <None Remove="Reports\Report4.rdlc" />
+    <None Remove="Reports\Report5.rdlc" />
+    <None Remove="Reports\Report6.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Reports\Report1.rdlc" />
+    <EmbeddedResource Include="Reports\Report2.rdlc" />
+    <EmbeddedResource Include="Reports\Report4.rdlc" />
+    <EmbeddedResource Include="Reports\Report5.rdlc" />
+    <EmbeddedResource Include="Reports\Report6.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Floxel" Version="1.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Npgsql" Version="7.0.6" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.18" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\password.ttf" />
+    <EmbeddedResource Include="Reports\Report3.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Reports\DataSet.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Reports\DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

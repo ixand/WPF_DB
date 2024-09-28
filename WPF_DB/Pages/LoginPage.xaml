@@ -1,0 +1,48 @@
+﻿<fuic:Page x:Class="WPF_DB.Pages.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:fuic="clr-namespace:FloxelLib.Controls;assembly=Floxel"
+      xmlns:mvvm="clr-namespace:WPF_DB.MVVM"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LoginPage">
+
+    <Page.DataContext>
+        <mvvm:LoginViewModel/>
+    </Page.DataContext>
+
+
+    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="150"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <fuic:Icon Kind="User" Width="30" Grid.Column="0" VerticalAlignment="Top"/>
+            <fuic:Icon Kind="Password" Width="28" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top"/>
+            <TextBox Text="{Binding Username,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1"  Margin="0,0,0,8"  VerticalAlignment="Center" />
+            <TextBox FontFamily="pack://application:,,,/Fonts/#password" Text="{Binding Password,UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,8" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center"/>
+            <Button Command="{Binding LoginCommand}" Grid.Column="1" Grid.Row="2">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <fuic:Icon Kind="Star" Width="18" Margin="0,0,4,0"/>
+                    <TextBlock Text="Увійти"/>
+                </StackPanel>
+            </Button>
+        </Grid>
+
+
+
+
+
+
+    </StackPanel>
+
+</fuic:Page>

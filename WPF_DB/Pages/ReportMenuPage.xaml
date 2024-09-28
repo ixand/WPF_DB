@@ -1,0 +1,41 @@
+﻿<Page x:Class="WPF_DB.Pages.ReportMenuPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mvvm="clr-namespace:WPF_DB.MVVM"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ReportMenuPage">
+
+    <Page.DataContext>
+        <mvvm:ReportViewModel/>
+    </Page.DataContext>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="10" Content="назад" Command="{Binding ReturnCommand}"/>
+        <Button  Width="150" Height="60" Command="{Binding Report1Command}" MaxWidth="150">
+            <TextBlock  TextWrapping="Wrap" Text="Підключені станції" Width="118"/>
+        </Button>
+        <Button Grid.Row="1" Width="150" Height="60"  VerticalAlignment="Top" Command="{Binding Report2Command}" MaxWidth="150">
+            <TextBlock  TextWrapping="Wrap" Text="Результати вимірювання станції" Width="118"/>
+        </Button>
+        <Button Command="{Binding Report3Command}" Margin="50,87,618,42" Grid.Row="1" MaxWidth="150">
+            <TextBlock  TextWrapping="Wrap" Text="Графічне представлення 1" Width="100"/>
+        </Button>
+        <Button Command="{Binding Report4Command}" Margin="234,86,434,42" Grid.Row="1" MaxWidth="150" >
+            <TextBlock  TextWrapping="Wrap" Text="Графічне представлення 2" Width="100"/>
+        </Button>
+        <Button Command="{Binding Report5Command}" Margin="432,86,238,42" Grid.Row="1" MaxWidth="150">
+            <TextBlock  TextWrapping="Wrap" Text="Графічне представлення 3" Width="100"/>
+        </Button>
+        <Button Command="{Binding Report6Command}" Margin="602,86,68,42" Grid.Row="1" MaxWidth="150">
+            <TextBlock  TextWrapping="Wrap" Text="Графічне представлення 4" Width="100"/>
+        </Button>
+    </Grid>
+</Page>

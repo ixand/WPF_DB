@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\CollectedInfoPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\DatabasePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\LoginPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Report2Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Report3Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Report4Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Report5Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Report6Page.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReportMenuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\ReportPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\UserQueryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Reports\DataSet.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\CollectedInfoPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\DatabasePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\LoginPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Report2Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Report3Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Report4Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Report5Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Report6Page.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReportMenuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\ReportPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\UserQueryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
